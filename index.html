@@ -13,12 +13,14 @@
     <script type="text/javascript" src="js/waypoints.min.js"></script>
     <script type="text/javascript" src="js/jquery.easing.min.js"></script>
 
+
     <script>
         function myPopup() {
-            if (document.getElementById("emailInput").value != "") {
-
+            if (myForm.checkValidity()) {
                 document.getElementById("confirm").innerHTML = "Email will be sent in 10 years";
                 document.getElementById("emailInput").value = "";
+            } else {
+                document.getElementById("confirm").innerHTML = "Invalid Format";
             }
 
 
@@ -46,8 +48,8 @@
         <br>
 
         <h1>Amazing Trailers </h1>  </br>
-        <form action="#" draggable="false">
-            <input id="emailInput" required="required" type="email" pattern="[^ @]*@[^ @]*"
+        <form action="#" draggable="false" id="myForm">
+            <input id="emailInput" required="required" type="email"
                    placeholder="Email to a friend"/>
             <input type="submit" onclick="myPopup();return false" value="Send"/>
         </form>
@@ -62,8 +64,8 @@
 
         <video width="100%" height="100%" controls preload="none" class="center"
                poster="images/Halo-4-Forward-Unto-Dawn-Poster.jpg">
-            <source src="video/TRAILER DE HALO 4 - YouTube.mp4"/>
-            type="video/mp4">
+            <source src="video/TRAILER DE HALO 4 - YouTube.mp4"
+                    type="video/mp4">
             <source src="video/TRAILER DE HALO 4 - YouTube.webm" type="video/webm">
             Your browser does not support the video tag.
         </video>

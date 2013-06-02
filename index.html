@@ -13,29 +13,54 @@
     <script type="text/javascript" src="js/waypoints.min.js"></script>
     <script type="text/javascript" src="js/jquery.easing.min.js"></script>
 
+    <script>
+        function myPopup() {
+            if (document.getElementById("emailInput").value != "") {
 
+                document.getElementById("confirm").innerHTML = "Email will be sent in 10 years";
+                document.getElementById("emailInput").value = "";
+            }
+
+
+        }
+    </script>
 </header>
 <body style="width:100%;margin:auto;">
 
 
+<nav>
+    <ul class="navigation" draggable="false">
+        <li class="current" data-slide="1">Intro</li>
+        <li data-slide="2">Halo4</li>
+        <li data-slide="3">Super Man</li>
+        <li data-slide="4">Game of Thrones</li>
+        <li data-slide="5">Breaking Bad</li>
+        <li data-slide="6">After Earth</li>
 
-<section id="home" class="slide" >
+    </ul>
+
+</nav>
+<section id="home" class="slide" data-slide="1" draggable="false">
 
     <article>
         <br>
-        <h1>Ultimate Best </h1>
 
-        <h1>Games and Movies Trailers </h1>
-
+        <h1>Amazing Trailers </h1>  </br>
+        <form action="#" draggable="false">
+            <input id="emailInput" required="required" type="email" pattern="[^ @]*@[^ @]*"
+                   placeholder="Email to a friend"/>
+            <input type="submit" onclick="myPopup();return false" value="Send"/>
+        </form>
+        <label id="confirm"></label>
 
     </article>
 </section>
-<section id="Game1" class="slide" >
+<section id="Game1" class="slide" data-slide="2" draggable="false">
 
 
     <article>
 
-        <video  controls preload="none" class="center"
+        <video width="100%" height="100%" controls preload="none" class="center"
                poster="images/Halo-4-Forward-Unto-Dawn-Poster.jpg">
             <source src="video/TRAILER DE HALO 4 - YouTube.mp4"/>
             type="video/mp4">
@@ -45,10 +70,10 @@
 
     </article>
 </section>
-<section id="Game2" class="slide" >
+<section id="Game2" class="slide" data-slide="3" draggable="false">
 
     <article>
-        <video  controls preload="none" class="center" poster="images/SupermanSymbol.jpg">
+        <video width="100%" height="100%" controls preload="none" class="center" poster="images/SupermanSymbol.jpg">
 
             <source src="video/Man of Steel - Official Trailer 3 [HD] - YouTube.mp4"
                     type="video/mp4">
@@ -57,10 +82,10 @@
         </video>
     </article>
 </section>
-<section id="Game3" class="slide" >
+<section id="Game3" class="slide" data-slide="4" draggable="false">
 
     <article>
-        <video  controls preload="none" class="center"
+        <video width="100%" height="100%" controls preload="none" class="center"
                poster="images/a_game_of_thrones-1920x1200.jpg">
 
             <source src="video/Game Of Thrones Season 3- Trailer - YouTube.mp4"
@@ -70,10 +95,10 @@
         </video>
     </article>
 </section>
-<section id="Game4" class="slide" >
+<section id="Game4" class="slide" data-slide="5" draggable="false">
 
     <article>
-        <video  controls preload="none" class="center"
+        <video width="100%" height="100%" controls preload="none" class="center"
                poster="images/breaking_bad_2-1280x720 (1).jpg">
 
             <source src="video/Breaking Bad recap seasons 1-4 - YouTube.mp4"
@@ -84,10 +109,10 @@
     </article>
 </section>
 
-<section id="Game5" class="slide"   >
+<section id="Game5" class="slide" data-slide="6" draggable="false">
 
     <article>
-        <video  controls preload="none" class="center"
+        <video width="100%" height="100%" controls preload="none" class="center"
                poster="images/after_earth_movie_2013-1280x800.jpg">
 
             <source src="video/After Earth - Official Trailer #2 (HD) - YouTube.mp4"

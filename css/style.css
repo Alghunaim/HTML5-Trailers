@@ -1,10 +1,13 @@
-
-
 @font-face {
     font-family: 'Tagesschrift';
     src: url('tagesschrift.ttf');
 }
-h1, h2, h3 { font-family: 'Tagesschrift', 'Georgia', serif; font-size: xx-large }
+
+h1, h2, h3 {
+    font-family: 'Tagesschrift', 'Georgia', serif;
+    font-size: xx-large;
+    text-shadow: -2px 2px 3px #2788ff;
+}
 
 html, body {
     width: 100%;
@@ -12,9 +15,12 @@ html, body {
     font-family: Arial, sans-serif;
     color: white;
 }
+ form
+ {
+     color:white;
+     font-family: 'Tagesschrift', 'Georgia', serif;
 
-
-
+ }
 p {
     padding: 0 0 10px 0;
 }
@@ -52,6 +58,7 @@ article {
     text-align: left;
     width: 250px;
 }
+
 .navigation li.active {
     color: yellowgreen;
 }
@@ -62,7 +69,6 @@ article {
     width: 250px !important;
     color: brown;
 }
-
 
 .slide {
     background-attachment: fixed;
@@ -77,12 +83,11 @@ video {
     max-width: 100%;
     height: auto;
 
-
 }
 
 video[poster] {
-    height: 400px;
-    width: 900px;
+    height: 300px;
+    width: 700px;
 
 }
 
@@ -112,8 +117,6 @@ video[poster] {
     background-size: cover;
 }
 
-
-
 #Game1, #Game2, #Game3, #Game4, #Game5, #home article {
 
     width: 100%;
@@ -131,7 +134,6 @@ video[poster] {
     background-size: cover;
 }
 
-
 #Game3 {
     color: white;
 
@@ -142,8 +144,6 @@ video[poster] {
     background-size: cover;
 }
 
-
-
 #Game4 {
     color: white;
 
@@ -153,8 +153,6 @@ video[poster] {
     -o-background-size: cover;
     background-size: cover;
 }
-
-
 
 #Game5 {
     color: white;
